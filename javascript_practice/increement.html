@@ -1,0 +1,76 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <style>
+        div p {
+            text-align: center;
+        }
+
+        /* styles.css */
+        .card {
+            width: 150px;
+            height: 150px;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            box-shadow: 2px 2px 5px #888888;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-content {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>🛒<sup id="value">0</sup></p>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <p>This is the card content.</p>
+            <p>This is the card content.</p>
+            <button class="incrementButton">Add to Cart</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <p>This is the card content.</p>
+            <p>This is the card content.</p>
+            <button class="incrementButton">Add to Cart</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <p>This is the card content.</p>
+            <p>This is the card content.</p>
+            <button class="incrementButton">Add to Cart</button>
+        </div>
+    </div>
+
+
+    <script>
+        var incrementButtons = document.querySelectorAll(".incrementButton");
+        var valueElement = document.getElementById("value");
+
+        var value = 0;
+
+        incrementButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                value++;
+                valueElement.textContent = value;
+            });
+        });
+    </script>
+</body>
+</html>

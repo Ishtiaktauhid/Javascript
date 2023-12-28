@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Output Box Example</title>
+</head>
+<body>
+  <form onsubmit="return false;">
+    <label for="color-input">Input a color:</label>
+    <input type="text" id="color-input" name="color-input">
+    <button onclick="fun()">Check</button>
+  </form>
+  
+  <div id="output-box"></div>
+
+  <script>
+    function fun() {
+      const input = document.getElementById("color-input").value; // Get the value of the color input field
+      let output = "green";
+
+      switch(input) {
+        case "80":
+          output = "You got A+";
+          break;
+        case "70":
+          output = "You got A-";
+          break;
+        case "60":
+          output = "You got B";
+          break;
+        default:
+          output = "You did not choose a valid color.";
+      }
+
+      document.getElementById("output-box").innerHTML = output;
+    }
+  </script>
+</body>
+</html>

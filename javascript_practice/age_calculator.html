@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Age Calculator</title>
+</head>
+<body>
+	<!-- <label for="dob">Enter your date of birth:</label>
+	<input type="date" id="dob">
+	<button onclick="calculateAge()">Calculate</button>
+	<p id="result"></p>
+
+	<script>
+		function calculateAge() {
+			// Retrieve the user's date of birth
+			let dob = new Date(document.getElementById("dob").value);
+
+			// Calculate the difference between the current date and the user's date of birth
+			let diff = Date.now() - dob.getTime();
+
+			// Convert the difference into years
+			let age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+
+			// Display the user's age on the page
+			document.getElementById("result").innerHTML = "Your age is " + age + " years.";
+		}
+	</script> -->
+
+
+    <!-- <label> Enter your date of birth</label>
+    <input type="date" id="user_input">
+    <button type="button" onclick="agecount()">Calculate</button>
+    <div id="result"></div>
+
+
+    <script>
+        function agecount(){
+            let users = new Date(document.getElementById("user_input").value);
+            let current_date = new Date();
+            let diff =  current_date - n;
+            let age = Math.floor(diff/(1000 * 60 * 60 * 24 * 365));
+            document.getElementById("result").innerHTML = `Your age is ${age} years old.`;
+
+        }
+    </script> -->
+
+    <div id="result"></div>
+
+    <script>
+        let n = new Date(prompt("Enter your birthdate (mm/dd/yyyy)"));
+        let current_date=new Date();
+        let diff =  current_date - n ;
+        let age = Math.floor(diff/(1000 * 60 * 60 * 24 * 365));
+        document.getElementById("result").innerHTML = `Your age is ${age} years old.`;
+
+    </script>
+</body>
+</html>
